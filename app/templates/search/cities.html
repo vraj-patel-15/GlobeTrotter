@@ -3,12 +3,437 @@
 <div class="space-y-6">
     <input type="text" placeholder="Search cities or countries..." class="w-full p-4 border rounded-xl text-sm">
     <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl border overflow-hidden">
-            <div class="h-32 bg-slate-200"></div>
+        <!-- 1. Tokyo -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf" alt="Tokyo, Japan" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Asia</span>
+            </div>
             <div class="p-4">
-                <h3 class="font-bold">Tokyo, Japan</h3>
-                <p class="text-xs text-slate-500">Cost Index: $$$$</p>
-                <button class="mt-3 w-full bg-slate-100 text-xs font-semibold py-2 rounded">+ Add to Trip</button>
+                <h3 class="font-bold text-lg">Tokyo, Japan</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$240/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 2. Paris -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris, France" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Paris, France</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$260/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 3. New York City -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9" alt="New York City, USA" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">North America</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">New York City, USA</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$$ ($300+/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$350/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 4. London -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad" alt="London, UK" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">London, United Kingdom</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$270/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 5. Rome -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5" alt="Rome, Italy" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Rome, Italy</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$ ($120 - $200/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$160/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 6. Barcelona -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded" alt="Barcelona, Spain" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Barcelona, Spain</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$ ($120 - $200/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$150/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 7. Sydney -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9" alt="Sydney, Australia" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Oceania</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Sydney, Australia</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$250/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 8. Dubai -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c" alt="Dubai, UAE" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Middle East</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Dubai, UAE</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$280/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 9. Singapore -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd" alt="Singapore" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Asia</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Singapore</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$$ ($300+/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$320/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 10. Bangkok -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365" alt="Bangkok, Thailand" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Asia</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Bangkok, Thailand</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$ ($60 - $120/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$80/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 11. Istanbul -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200" alt="Istanbul, Turkey" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe / Asia</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Istanbul, Turkey</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$ ($60 - $120/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$90/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 12. Amsterdam -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1512470876302-972faa2aa9a4" alt="Amsterdam, Netherlands" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Amsterdam, Netherlands</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$265/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 13. Seoul -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241" alt="Seoul, South Korea" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Asia</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Seoul, South Korea</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$ ($120 - $200/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$145/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 14. Prague -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1541849546-216549ae216d" alt="Prague, Czech Republic" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Prague, Czech Republic</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$ ($60 - $120/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$110/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 15. Cape Town -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f" alt="Cape Town, South Africa" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Africa</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Cape Town, South Africa</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$ ($60 - $120/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$100/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 16. Rio de Janeiro -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325" alt="Rio de Janeiro, Brazil" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">South America</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Rio de Janeiro, Brazil</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$ ($60 - $120/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$85/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 17. Cairo -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1572252009286-268acec5ca0a" alt="Cairo, Egypt" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Africa</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Cairo, Egypt</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $ (&lt;$60/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$45/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 18. Vienna -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1516550893923-42d28e5677af" alt="Vienna, Austria" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Vienna, Austria</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$ ($120 - $200/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$180/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 19. Toronto -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1517935703635-27c737821a1d" alt="Toronto, Canada" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">North America</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Toronto, Canada</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$235/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 20. Venice -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0" alt="Venice, Italy" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Venice, Italy</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$275/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 21. Kyoto -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e" alt="Kyoto, Japan" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Asia</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Kyoto, Japan</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$ ($120 - $200/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$175/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 22. San Francisco -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29" alt="San Francisco, USA" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">North America</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">San Francisco, USA</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$$ ($300+/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$330/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 23. Athens -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1503152394-c571994fd383" alt="Athens, Greece" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Athens, Greece</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$ ($60 - $120/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$115/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 24. Buenos Aires -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849" alt="Buenos Aires, Argentina" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">South America</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Buenos Aires, Argentina</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $ (&lt;$60/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$55/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 25. Berlin -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047" alt="Berlin, Germany" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Berlin, Germany</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$ ($120 - $200/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$155/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 26. Vancouver -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1559511260-66a654ae982a" alt="Vancouver, Canada" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">North America</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Vancouver, Canada</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$245/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 27. Lisbon -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d" alt="Lisbon, Portugal" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Lisbon, Portugal</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$ ($60 - $120/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$118/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 28. Dublin -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1549918864-48ac978761a4" alt="Dublin, Ireland" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Europe</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Dublin, Ireland</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$255/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 29. Auckland -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad" alt="Auckland, New Zealand" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Oceania</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Auckland, New Zealand</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$$$ ($200 - $300/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$230/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 30. Marrakech -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b" alt="Marrakech, Morocco" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">Africa</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Marrakech, Morocco</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $ (&lt;$60/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$50/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
+            </div>
+        </div>
+
+        <!-- 31. Mexico City -->
+        <div class="bg-white rounded-xl border overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="h-48 overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1518638150340-f706e86654de" alt="Mexico City, Mexico" class="w-full h-full object-cover">
+                <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">North America</span>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">Mexico City, Mexico</h3>
+                <p class="text-xs text-slate-500 mt-1">Cost Index: $$ ($60 - $120/day)</p>
+                <p class="text-xs font-semibold text-slate-700 mt-0.5">Avg. Daily Cost (2026): ~$75/day</p>
+                <button class="mt-4 w-full bg-slate-900 text-white hover:bg-slate-800 text-xs font-semibold py-2.5 rounded-lg transition">+ Add to Trip</button>
             </div>
         </div>
     </div>
