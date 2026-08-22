@@ -8,9 +8,9 @@ trips_bp = Blueprint('trips', __name__, url_prefix='/trips')
 
 
 @trips_bp.route('/')
+@trips_bp.route('/list')
 @login_required
 def list_trips():
-    """Displays a list of all trips created by the logged-in user."""
     user_trips = Trip.query.filter_by(user_id=current_user.id) \
         .order_by(Trip.start_date.desc()) \
         .all()
@@ -30,21 +30,20 @@ def create():
         budget = request.form.get('budget', type=float, default=0.0)
         is_public = True if request.form.get('is_public') else False
 
-        # Basic form validation
         if not title or not start_date_str or not end_date_str:
             flash('Title, start date, and end date are required.', 'danger')
-            return render_template('trips/create.html')
+            return render_template('trips/create.html', is_edit=False)
 
         try:
             start_date = datetime.strptime(start_date_str, '%Y-%m-%d').date()
             end_date = datetime.strptime(end_date_str, '%Y-%m-%d').date()
         except ValueError:
             flash('Invalid date format. Please use YYYY-MM-DD.', 'danger')
-            return render_template('trips/create.html')
+            return render_template('trips/create.html', is_edit=False)
 
         if start_date > end_date:
             flash('End date must be on or after the start date.', 'danger')
-            return render_template('trips/create.html')
+            return render_template('trips/create.html', is_edit=False)
 
         new_trip = Trip(
             title=title,
@@ -65,7 +64,7 @@ def create():
             db.session.rollback()
             flash('An error occurred while creating the trip. Please try again.', 'danger')
 
-    return render_template('trips/create.html')
+    return render_template('trips/create.html', is_edit=False)
 
 
 @trips_bp.route('/<int:trip_id>')
@@ -74,7 +73,6 @@ def detail(trip_id):
     """Shows the summary details of a specific trip."""
     trip = Trip.query.get_or_404(trip_id)
 
-    # Allow access if user owns the trip or if the trip is public
     if trip.user_id != current_user.id and not trip.is_public:
         abort(403)
 
@@ -100,18 +98,18 @@ def edit(trip_id):
 
         if not title or not start_date_str or not end_date_str:
             flash('Title, start date, and end date are required.', 'danger')
-            return render_template('trips/create.html', trip=trip)
+            return render_template('trips/create.html', trip=trip, is_edit=True)
 
         try:
             start_date = datetime.strptime(start_date_str, '%Y-%m-%d').date()
             end_date = datetime.strptime(end_date_str, '%Y-%m-%d').date()
         except ValueError:
             flash('Invalid date format.', 'danger')
-            return render_template('trips/create.html', trip=trip)
+            return render_template('trips/create.html', trip=trip, is_edit=True)
 
         if start_date > end_date:
             flash('End date must be on or after start date.', 'danger')
-            return render_template('trips/create.html', trip=trip)
+            return render_template('trips/create.html', trip=trip, is_edit=True)
 
         trip.title = title
         trip.description = description
@@ -128,7 +126,7 @@ def edit(trip_id):
             db.session.rollback()
             flash('Failed to update trip.', 'danger')
 
-    return render_template('trips/create.html', trip=trip)
+    return render_template('trips/create.html', trip=trip, is_edit=True)
 
 
 @trips_bp.route('/<int:trip_id>/delete', methods=['POST'])
