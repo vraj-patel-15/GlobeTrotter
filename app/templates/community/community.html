@@ -1,10 +1,174 @@
 {% extends "base.html" %}
 {% block content %}
 <h1 class="text-xl font-bold mb-4">Public Travel Plans</h1>
-<div class="grid md:grid-cols-2 gap-4">
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- ASIA -->
     <div class="bg-white p-5 rounded-xl border border-slate-200">
-        <h3 class="font-bold">10 Days in Japan</h3>
+        <h3 class="font-bold">10 Days in Japan (Tokyo, Kyoto, Osaka)</h3>
         <p class="text-xs text-slate-500">Shared by @kenji</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">7 Days in Bali (Ubud, Seminyak, Uluwatu)</h3>
+        <p class="text-xs text-slate-500">Shared by @wayan_travels</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days in Bangkok & Ayutthaya</h3>
+        <p class="text-xs text-slate-500">Shared by @somchai</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">4 Days in Singapore Highlights</h3>
+        <p class="text-xs text-slate-500">Shared by @mei_ling</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days in Seoul & Nami Island</h3>
+        <p class="text-xs text-slate-500">Shared by @min_jun</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days in Dubai & Abu Dhabi Desert Escape</h3>
+        <p class="text-xs text-slate-500">Shared by @tariq_uae</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">8 Days in Vietnam (Hanoi, Ha Long, Hoi An)</h3>
+        <p class="text-xs text-slate-500">Shared by @linh_travels</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">7 Days Golden Triangle India (Delhi, Agra, Jaipur)</h3>
+        <p class="text-xs text-slate-500">Shared by @aarav</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">4 Days in Istanbul History & Food</h3>
+        <p class="text-xs text-slate-500">Shared by @emre_ist</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+
+    <!-- EUROPE -->
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">7 Days in Paris & Versailles</h3>
+        <p class="text-xs text-slate-500">Shared by @chloe_p</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days in Rome & Vatican City</h3>
+        <p class="text-xs text-slate-500">Shared by @marco_roma</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">4 Days in Barcelona Architecture & Tapas</h3>
+        <p class="text-xs text-slate-500">Shared by @mateo_bcn</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days London Classic Highlights</h3>
+        <p class="text-xs text-slate-500">Shared by @oliver_uk</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">4 Days in Amsterdam Canals & Museums</h3>
+        <p class="text-xs text-slate-500">Shared by @sanne_nl</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">4 Days Prague Fairy Tale Tour</h3>
+        <p class="text-xs text-slate-500">Shared by @pavel_cz</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">6 Days Greek Islands (Santorini & Mykonos)</h3>
+        <p class="text-xs text-slate-500">Shared by @nikos_ath</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days Swiss Alps (Interlaken & Zermatt)</h3>
+        <p class="text-xs text-slate-500">Shared by @heidi_swiss</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">7 Days Iceland Ring Road Roadtrip</h3>
+        <p class="text-xs text-slate-500">Shared by @freyja_iceland</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">4 Days Lisbon Coast & Sintra</h3>
+        <p class="text-xs text-slate-500">Shared by @joao_lisbon</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">4 Days Berlin History & Nightlife</h3>
+        <p class="text-xs text-slate-500">Shared by @lukas_berlin</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+
+    <!-- NORTH AMERICA -->
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days New York City First Timer Guide</h3>
+        <p class="text-xs text-slate-500">Shared by @alex_nyc</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">4 Days Los Angeles & Coastline</h3>
+        <p class="text-xs text-slate-500">Shared by @sam_socal</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">7 Days Banff & Canadian Rockies</h3>
+        <p class="text-xs text-slate-500">Shared by @liam_canada</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days Mexico City Culture & Tacos</h3>
+        <p class="text-xs text-slate-500">Shared by @sofia_cdmx</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">3 Days Las Vegas Strip & Grand Canyon</h3>
+        <p class="text-xs text-slate-500">Shared by @jake_vegas</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+
+    <!-- LATIN AMERICA -->
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">8 Days Peru (Lima, Cusco, Machu Picchu)</h3>
+        <p class="text-xs text-slate-500">Shared by @diego_peru</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days Rio de Janeiro Highlights</h3>
+        <p class="text-xs text-slate-500">Shared by @lucas_rio</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days Buenos Aires Tango & Steaks</h3>
+        <p class="text-xs text-slate-500">Shared by @camila_ba</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+
+    <!-- AFRICA & OCEANIA -->
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">6 Days Cape Town & Garden Route</h3>
+        <p class="text-xs text-slate-500">Shared by @sipho_sa</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days Cairo Pyramids & Nile Cruise</h3>
+        <p class="text-xs text-slate-500">Shared by @omar_cairo</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">5 Days Sydney Harbor & Beaches</h3>
+        <p class="text-xs text-slate-500">Shared by @chloe_aus</p>
+        <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <h3 class="font-bold">7 Days New Zealand South Island Road Trip</h3>
+        <p class="text-xs text-slate-500">Shared by @kiwi_adventures</p>
         <button class="mt-4 bg-blue-50 text-blue-600 text-xs font-bold px-3 py-2 rounded">Copy Itinerary</button>
     </div>
 </div>
