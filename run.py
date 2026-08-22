@@ -33,4 +33,7 @@ if __name__ == "__main__":
     host = os.environ.get("HOST", "127.0.0.1")
     debug = os.environ.get("FLASK_DEBUG", "True").lower() in ["true", "1", "t"]
 
+    with app.app_context():
+        db.create_all()
+
     app.run(host=host, port=port, debug=debug)
