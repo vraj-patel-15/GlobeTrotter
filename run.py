@@ -4,7 +4,7 @@ from app.models.user import User
 from app.models.trip import Trip
 from app.models.city import City
 from app.models.activity import Activity
-from app.models.itinerary import Itinerary
+from app.models.itinerary import Stop, TripActivity
 from app.models.expense import Expense
 
 # Get environment config name (defaults to 'development')
@@ -21,7 +21,8 @@ def make_shell_context():
         "Trip": Trip,
         "City": City,
         "Activity": Activity,
-        "Itinerary": Itinerary,
+        "Stop": Stop,
+        "TripActivity": TripActivity,
         "Expense": Expense,
     }
 
