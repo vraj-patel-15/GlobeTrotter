@@ -1,4 +1,4 @@
-GlobalTrotters
+## GlobalTrotters
 
 GlobalTrotters is a travel planning and expense management platform designed to help travelers organize itineraries, estimate destination costs, and share community travel plans.
 
