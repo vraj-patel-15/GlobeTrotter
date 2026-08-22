@@ -12,7 +12,24 @@ class Stop(db.Model):
     order_index = db.Column(db.Integer, default=0)
     budget = db.Column(db.Numeric(10, 2), default=0)
 
-    trip = db.relationship('Trip', backref='stops')
+    # Hybrid properties for backward-compatibility with arrival/departure naming
+    @property
+    def arrival_date(self):
+        return self.start_date
+
+    @arrival_date.setter
+    def arrival_date(self, value):
+        self.start_date = value
+
+    @property
+    def departure_date(self):
+        return self.end_date
+
+    @departure_date.setter
+    def departure_date(self, value):
+        self.end_date = value
+
+    trip = db.relationship('Trip', backref=db.backref('stops', cascade='all, delete-orphan'))
     city = db.relationship('City')
 
     def __repr__(self):
@@ -29,8 +46,22 @@ class TripActivity(db.Model):
     time = db.Column(db.Time, nullable=True)
     cost_override = db.Column(db.Numeric(10, 2), nullable=True)
 
-    stop = db.relationship('Stop', backref='trip_activities')
+    # Property aliases for compatibility across services
+    @property
+    def day_number(self):
+        return 1
+
+    @property
+    def notes(self):
+        return ""
+
+    stop = db.relationship('Stop', backref=db.backref('trip_activities', cascade='all, delete-orphan', lazy=True))
     activity = db.relationship('Activity')
 
     def __repr__(self):
         return f'<TripActivity stop={self.stop_id} activity={self.activity_id}>'
+
+
+# Class aliases to support existing service/route imports without breaking schema
+ItineraryStop = Stop
+ItineraryItem = TripActivity
