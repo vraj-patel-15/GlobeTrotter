@@ -1,13 +1,81 @@
 {% extends "base.html" %}
+{% block title %}{{ trip.title }} - Itinerary{% endblock %}
+
 {% block content %}
-<div class="max-w-4xl mx-auto bg-white p-8 rounded-xl border border-slate-200">
-    <h1 class="text-2xl font-bold mb-2">European Odyssey Itinerary</h1>
-    <p class="text-slate-500 text-sm mb-6">14 Days • 3 Cities • $2,620 Estimated Spend</p>
-    <div class="border-l-2 border-blue-500 pl-6 space-y-6">
-        <div>
-            <h3 class="font-bold text-blue-600">Day 1: Paris, France</h3>
-            <p class="text-sm text-slate-600 mt-1">Visit Louvre Museum ($45) & Evening Seine River Cruise ($25)</p>
+<div class="max-w-4xl mx-auto space-y-6">
+    <!-- Header Card -->
+    <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+        <div class="flex justify-between items-start">
+            <div>
+                <h1 class="text-2xl font-bold text-slate-900 mb-1">{{ trip.title }}</h1>
+                <p class="text-slate-500 text-sm">
+                    📅 {{ trip.start_date.strftime('%b %d, %Y') if trip.start_date }} - {{ trip.end_date.strftime('%b %d, %Y') if trip.end_date }}
+                    • {{ stops|length }} {{ 'City' if stops|length == 1 else 'Cities' }}
+                    • Budget: ${{ "%.2f"|format(trip.budget or 0) }}
+                </p>
+            </div>
+            {% if current_user.is_authenticated and trip.user_id == current_user.id %}
+                <a href="{{ url_for('itinerary.builder', trip_id=trip.id) }}" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                    ✏️ Edit Builder
+                </a>
+            {% endif %}
         </div>
+    </div>
+
+    <!-- Timeline Body -->
+    <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+        <h2 class="text-lg font-bold text-slate-900 mb-6">Trip Timeline & Planned Schedule</h2>
+
+        {% if stops %}
+            <div class="border-l-2 border-blue-500 pl-6 space-y-8">
+                {% for stop in stops %}
+                    <div class="relative">
+                        <!-- Dot Indicator on Timeline -->
+                        <div class="absolute -left-[31px] top-1.5 w-3 h-3 bg-blue-500 rounded-full border-2 border-white"></div>
+
+                        <h3 class="font-bold text-blue-600 text-base">
+                            Stop {{ loop.index }}: {{ stop.city.name if stop.city else 'Destination' }}
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-0.5">
+                            Arrive: {{ stop.arrival_date.strftime('%b %d, %Y') if stop.arrival_date }} — Depart: {{ stop.departure_date.strftime('%b %d, %Y') if stop.departure_date }}
+                        </p>
+
+                        <!-- Scheduled Activities for this Stop -->
+                        {% set activities = stop.activities if stop.activities is defined else stop.trip_activities %}
+                        {% if activities %}
+                            <div class="mt-3 space-y-2">
+                                {% for act in activities %}
+                                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 flex justify-between items-center text-sm">
+                                        <div>
+                                            <span class="font-semibold text-slate-800">{{ act.activity.name if act.activity else 'Activity' }}</span>
+                                            {% if act.notes %}
+                                                <p class="text-xs text-slate-500 mt-0.5">{{ act.notes }}</p>
+                                            {% endif %}
+                                        </div>
+                                        <div class="text-right">
+                                            <span class="text-xs bg-white border border-slate-200 text-slate-600 font-medium px-2 py-0.5 rounded">
+                                                Day {{ act.day_number or 1 }}
+                                            </span>
+                                            {% if act.cost_override or (act.activity and act.activity.cost) %}
+                                                <p class="text-xs font-semibold text-emerald-600 mt-1">
+                                                    ${{ "%.2f"|format(act.cost_override or act.activity.cost) }}
+                                                </p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <p class="text-xs text-slate-400 mt-2 italic">No activities planned for this stop yet.</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-slate-500 text-sm text-center py-8">
+                No destination stops added to this trip yet.
+            </p>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
