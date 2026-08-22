@@ -5,7 +5,7 @@ from app import db
 from app.models.trip import Trip
 from app.models.city import City
 from app.models.activity import Activity
-from app.models.itinerary import ItineraryStop, ItineraryItem
+from app.models.itinerary import ItineraryStop, ItineraryItem, Stop
 
 itinerary_bp = Blueprint('itinerary', __name__, url_prefix='/itinerary')
 
@@ -18,7 +18,7 @@ def builder(trip_id):
     if trip.user_id != current_user.id:
         abort(403)
 
-    stops = ItineraryStop.query.filter_by(trip_id=trip.id).order_by(ItineraryStop.arrival_date.asc()).all()
+    stops = Stop.query.filter_by(trip_id=trip_id).order_by(Stop.start_date.asc(), Stop.order_index.asc()).all()
     all_cities = City.query.order_by(City.name.asc()).all()
 
     return render_template('itinerary/builder.html', trip=trip, stops=stops, cities=all_cities)

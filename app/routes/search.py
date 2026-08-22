@@ -85,6 +85,6 @@ def activities():
             'estimated_cost': getattr(a, 'estimated_cost', 0.0),
             'duration_hours': getattr(a, 'duration_hours', 1.0),
             'city_id': a.city_id
-        } for c in results])
+        } for a in results])
 
     return render_template('search/activities.html', activities=results, categories=categories, query=query)
